@@ -49,7 +49,7 @@ Vue.prototype.$confirm = MessageBox.confirm
 router.beforeEach((to, from, next) => {
   const token = store.state.user.token
   const userInfo = store.state.user.user
-  const whiteList = ['Login', 'documentEditor']
+  const whiteList = ['Login', 'documentEditor', 'oauth']
   if (token) {
     axiosInstance.defaults.headers.common['Authorization'] = `Bearer ${token}`
     if (!userInfo) {

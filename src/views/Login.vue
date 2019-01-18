@@ -116,7 +116,7 @@ export default {
                 }
               }
             })
-            // options.apiHost = 'http://127.0.0.1:8087'
+            options.apiHost = 'http://127.0.0.1:8087'
             this.qrClient = new QrcodeLogin(`#${this.$refs['qrcode'].getAttribute('id')}`, options)
           })
         } else {

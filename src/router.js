@@ -27,6 +27,11 @@ export default new Router({
       path: '/document/editor/:fileId',
       name: 'documentEditor',
       component: () => import('@/views/DocumentEditor')
+    },
+    {
+      path: '/oauth',
+      name: 'oauth',
+      component: () => import('@/views/Oauth')
     }
   ]
 })
