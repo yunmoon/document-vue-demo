@@ -7,6 +7,7 @@
 <script>
 import documentApi from '@/api/document'
 import { mapGetters } from 'vuex'
+import parameter from '@/configs/parameter'
 export default {
   name: 'DocumentEditor',
   computed: {
@@ -90,7 +91,7 @@ export default {
             nickname: this.userInfo ? this.userInfo.name : '游客',
             fileId: this.$route.params.fileId,
             backUrl: `${window.location.protocol}//${window.location.host}/#${this.from.path}`,
-            documentCallback: encodeURIComponent('http://192.168.0.197:8082/document/callback')
+            documentCallback: encodeURIComponent(parameter.saveCallbackUrl)
           }
           documentApi.getDocumentEditConfig(params).then(response => {
             resolve(response.data.data)
